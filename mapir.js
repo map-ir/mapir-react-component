@@ -16,7 +16,7 @@ class Mapir extends React.Component {
 
 	render() {
 		return React.createElement(Map, _extends({}, this.props, {
-			style: `https://map.ir/vector/styles/main/main_mobile_style.json?access_token=${this.props.accessToken}`,
+			style: `https://map.ir/vector/styles/main/main_mobile_style.json?x-api-key=${this.props.accessToken}`,
 			minZoom: 12,
 			center: [51.420470, 35.729054],
 			tms: true,

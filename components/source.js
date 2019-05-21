@@ -14,7 +14,7 @@ class MapirSource extends React.Component {
 			tileJsonSource: {
 				"type": "raster",
 				"tiles": [
-					`https://map.ir/vector/mobile/1.0.0/Shiveh:Shiveh@EPSG:3857@png/{z}/{x}/{y}.png?access_token=${this.props.accessToken}`,
+					`https://map.ir/vector/mobile/1.0.0/Shiveh:Shiveh@EPSG:3857@png/{z}/{x}/{y}.png?x-api-key=${this.props.accessToken}`,
 				],
 				"tileSize": 512
 			}
