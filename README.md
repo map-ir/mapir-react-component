@@ -192,15 +192,7 @@ import Mapir from "mapir-react-component";
 
 ...
 
-const RASTER_SOURCE_OPTIONS = {
-  "type": "raster",
-  "tiles": [
-    "https://someurl.com/512/{z}/{x}/{y}",
-  ],
-  "tileSize": 512
-};
-
-<Mapir.Source id="source_id" tileJsonSource={RASTER_SOURCE_OPTIONS} />
+<Mapir.Source id="source_id" accessToken={'Your_Access_Token'} />
 <Mapir.Layer type="raster" id="layer_id" sourceId="source_id" />
 ```
 
