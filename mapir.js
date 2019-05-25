@@ -2,11 +2,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Marker, Cluster } from "react-mapbox-gl";
-import MapirSource from './components/source';
+import MapirSource from './components/source.js';
 import { setRTLTextPlugin } from "mapbox-gl";
-const Map = ReactMapboxGl({
-	accessToken: "pk.Mapir"
-});
+
 setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.2/mapbox-gl-rtl-text.js");
 
 class Mapir extends React.Component {
@@ -15,6 +13,17 @@ class Mapir extends React.Component {
 	}
 
 	render() {
+		const Map = ReactMapboxGl({
+			accessToken: "pk.Mapir",
+			transformRequest: (url)=> {
+				return {
+					url: url,
+					headers: { 'x-api-key': this.props.accessToken},
+					credentials: 'include'  // Include cookies for cross-origin requests
+				}
+
+			}
+		});
 		return React.createElement(Map, _extends({}, this.props, {
 			style: `https://map.ir/vector/styles/main/main_mobile_style.json?x-api-key=${this.props.accessToken}`,
 			minZoom: 12,
