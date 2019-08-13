@@ -1,6 +1,6 @@
 {
   "name": "mapir-react-component",
-  "version": "1.2.0",
+  "version": "1.2.4",
   "main": "mapir.js",
   "_phantomChildren": {
     "@babel/core": "7.2.2",
@@ -156,7 +156,7 @@
   "bundleDependencies": false,
   "dependencies": {
     "mapbox-gl": "^0.54.0",
-    "react-mapbox-gl": "^4.2.3"
+    "react-mapbox-gl": "^4.6.0"
   },
   "deprecated": false,
   "devDependencies": {

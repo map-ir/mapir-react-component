@@ -13,13 +13,22 @@ Factory function that returns a React Mapir component. Parameters of the factory
 import Mapir from "mapir-react-component";
 
 ...
+const Map = Mapir.setToken({
+	transformRequest: (url)=> {
+		return {
+			url: url,
+			headers: { 'x-api-key': 'Your_Access_Token'} //Mapir access token
+		}
 
-<Mapir accessToken={'Your_Access_Token'}/>
+	}
+});
+...
+
+<Mapir Map={Map}/>
 ```
 
 ### Factory parameters
 
-* **accessToken** _(required)_ : `string` Mapir access token.
 * **apiUrl**: `string` Define a custom URL to fetch the vector tiles.
 * **minZoom** _(Default: `0`)_: `number` Minimum zoom level. Must be between 0 and 20.
 * **maxZoom** _(Default: `20`)_: `number` Maximum zoom level. Must be between 0 and 20.

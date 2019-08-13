@@ -5,7 +5,7 @@ import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleC
 import MapirSource from './components/source.js';
 import { setRTLTextPlugin } from "mapbox-gl";
 
-setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.2/mapbox-gl-rtl-text.js");
+setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js");
 
 class Mapir extends React.Component {
 	constructor(props) {
@@ -13,23 +13,13 @@ class Mapir extends React.Component {
 	}
 
 	render() {
-		const Map = ReactMapboxGl({
-			accessToken: "pk.Mapir",
-			transformRequest: (url)=> {
-				return {
-					url: url,
-					headers: { 'x-api-key': this.props.accessToken},
-					credentials: 'include'  // Include cookies for cross-origin requests
-				}
-
-			}
-		});
+		const Map = this.props.Map
 		return React.createElement(Map, _extends({}, this.props, {
-			style: `https://map.ir/vector/styles/main/main_mobile_style.json?x-api-key=${this.props.accessToken}`,
-			minZoom: 12,
-			center: [51.420470, 35.729054],
+			style: `https://map.ir/vector/styles/main/mapir-xyz-style.json`,
+			minZoom: this.props.minZoom || 12,
+			center: this.props.center || [51.420470, 35.729054],
 			tms: true,
-			containerStyle: {
+			containerStyle: this.props.containerStyle || {
 				height: "100vh",
 				width: "100vw"
 			}
@@ -49,4 +39,6 @@ Mapir.RotationControl = RotationControl;
 Mapir.Popup = Popup;
 Mapir.Marker = Marker;
 Mapir.Cluster = Cluster;
+Mapir.setToken = ReactMapboxGl;
+
 export default Mapir;
