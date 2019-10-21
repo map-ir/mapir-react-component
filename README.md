@@ -2,6 +2,7 @@
   <img src="https://map.ir/css/images/site-logo.svg" width="500"/>
 </a>
 
+[![npm version](https://badge.fury.io/js/mapir-react-component.svg)](https://badge.fury.io/js/mapir-react-component)
 # MapirReact
 
 Factory function that returns a React Mapir component. Parameters of the factory function are static; properties of your component are dynamic and get updated if they change between rendering.
