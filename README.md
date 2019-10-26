@@ -7,7 +7,7 @@
 
 Factory function that returns a React Mapir component. Parameters of the factory function are static; properties of your component are dynamic and get updated if they change between rendering.
 
-
+[![Edit mapir-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/objective-ganguly-st4od?fontsize=14)
 ### How to use
 
 ```jsx
@@ -527,3 +527,18 @@ clusterMarker = (coordinates) => (
 * **style**: `object` Apply style to the marker container
 * **className**: `string` Apply the className to the container of the Marker
 * **tabIndex** : `number` define the tab index value of the top container tag
+
+---
+
+# DrawControl
+
+### How to use
+
+```jsx
+import Mapir from "mapir-react-component";
+
+...
+
+<Mapir.DrawControl />
+```
+[Documentation](https://github.com/amaurymartiny/react-mapbox-gl-draw) 

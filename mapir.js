@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Marker, Cluster } from "react-mapbox-gl";
 import MapirSource from './components/source.js';
 import { setRTLTextPlugin } from "mapbox-gl";
+import DrawControl from 'react-mapbox-gl-draw';
+
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 
 setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js");
 
@@ -40,5 +43,6 @@ Mapir.Popup = Popup;
 Mapir.Marker = Marker;
 Mapir.Cluster = Cluster;
 Mapir.setToken = ReactMapboxGl;
+Mapir.DrawControl = DrawControl;
 
 export default Mapir;
