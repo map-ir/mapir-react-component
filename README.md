@@ -18,7 +18,10 @@ const Map = Mapir.setToken({
 	transformRequest: (url)=> {
 		return {
 			url: url,
-			headers: { 'x-api-key': 'Your_Access_Token'} //Mapir access token
+			headers: { 
+				'x-api-key': 'Your_Access_Token', //Mapir access token
+				'Mapir-SDK': 'reactjs'
+			}
 		}
 
 	}
