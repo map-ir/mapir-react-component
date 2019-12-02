@@ -59,8 +59,9 @@ const Map = Mapir.setToken({
 * **failIfMajorPerformanceCaveat** _(Default: `false`)_: `boolean` If `true` , map creation will fail if the performance of Mapbox GL JS would be dramatically worse than expected (i.e. a software renderer would be used).
 * **bearingSnap** _(Default: `7`)_: `number` The threshold, measured in degrees, that determines when the map's bearing (rotation) will snap to north. For example, with a bearingSnap of 7, if the user rotates the map within 7 degrees of north, the map will automatically snap to exact north.
 
-### Component Properties
 
+### Component Properties
+* **userLocation** locate the location of user, this props is active when is written as props.
 * **style** _(required)_ : `string | object` Mapbox map style, if changed, the style will be updated using `setStyle`.
 * **center** _(Default: `[ -0.2416815, 51.5285582 ]`)_: `[number, number]` Center the map at the position at initialisation
   * Must be in longitude, latitude coordinate order (as opposed to latitude, longitude) to match GeoJSON (source: https://www.mapbox.com/mapbox-gl-js/api/#lnglat).

@@ -3,7 +3,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Marker, Cluster } from "react-mapbox-gl";
 import MapirSource from './components/source.js';
-import { setRTLTextPlugin } from "mapbox-gl";
+import { setRTLTextPlugin, GeolocateControl } from "mapbox-gl";
 import DrawControl from 'react-mapbox-gl-draw';
 
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
@@ -25,7 +25,16 @@ class Mapir extends React.Component {
 			containerStyle: this.props.containerStyle || {
 				height: "100vh",
 				width: "100vw"
-			}
+			},
+			onStyleLoad: this.props.userLocation? map => { map.addControl(new GeolocateControl({
+				positionOptions:{
+					enableHighAccuracy:false,
+					timeout:5000,
+					maximumAge:10000
+				},
+				trackUserLocation: true
+			})); } :''
+			
 		}));
 	}
 
