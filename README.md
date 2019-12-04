@@ -27,5 +27,6 @@ const Map = Mapir.setToken({
 ```
 [![Edit mapir-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/objective-ganguly-st4od?fontsize=14)
 
-![Mapir react component English Documentation](https://github.com/map-ir/mapir-react-component/wiki/Documentation)
-![Mapir react component Persian Documentation](https://support.map.ir/developers/components/reactjs/)
+📖 ![Mapir react component English Documentation](https://github.com/map-ir/mapir-react-component/wiki/Documentation)
+
+📖 ![Mapir react component Persian Documentation](https://support.map.ir/developers/components/reactjs/)
