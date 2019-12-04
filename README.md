@@ -3,6 +3,9 @@
 
 ![Map.ir](https://map.ir/css/images/mapir-logo.png) React wrapper for mapbox-gl-js. Expose a bunch of component meant to be simple to use for React.
 
+## Get API Key
+🔑 You should first get api key from [Map.ir](https://corp.map.ir/registration/)
+
 ## Installation
 
 ```
