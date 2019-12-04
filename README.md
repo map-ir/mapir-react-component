@@ -1,14 +1,22 @@
 # MapirReactComponent
-[![npm version](https://badge.fury.io/js/mapir-react-component.svg)](https://badge.fury.io/js/mapir-react-component)
+[![npm version](https://badge.fury.io/js/mapir-react-component.svg)](https://www.npmjs.com/package/mapir-react-component)
 
 ![Map.ir](https://map.ir/css/images/mapir-logo.png) React wrapper for mapbox-gl-js. Expose a bunch of component meant to be simple to use for React.
 
-### Quick start 
+## Installation
 
+```
+npm i mapir-react-component
+```
+
+## Quick start 
+
+### Import module
 ```jsx
 import Mapir from "mapir-react-component";
-
-...
+```
+### Set API Key
+```jsx
 const Map = Mapir.setToken({
 	transformRequest: (url)=> {
 		return {
@@ -21,12 +29,17 @@ const Map = Mapir.setToken({
 
 	}
 });
-...
-
-<Mapir Map={Map}/>
+```
+### Generate Component
+```jsx
+render () {
+	return (
+		<Mapir Map={Map}/>
+	)
+}
 ```
 [![Edit mapir-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/objective-ganguly-st4od?fontsize=14)
 
-📖 ![Mapir react component English Documentation](https://github.com/map-ir/mapir-react-component/wiki/Documentation)
+📖 ![English Documentation](https://github.com/map-ir/mapir-react-component/wiki/Documentation)
 
-📖 ![Mapir react component Persian Documentation](https://support.map.ir/developers/components/reactjs/)
+📖 ![Persian Documentation](https://support.map.ir/developers/components/reactjs/)
