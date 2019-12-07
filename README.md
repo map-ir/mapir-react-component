@@ -43,7 +43,7 @@ render () {
 ```
 [![Edit mapir-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/objective-ganguly-st4od?fontsize=14)
 
-[Edit on StackBlitz](https://react-fgwfsq.stackblitz.io)
+[![Edit stackblitz](./assets/stackblitz.png)](https://react-fgwfsq.stackblitz.io)
 
 📖 [English Documentation](https://github.com/map-ir/mapir-react-component/wiki/Documentation)
 
