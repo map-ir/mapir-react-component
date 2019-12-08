@@ -155,7 +155,7 @@
   "author": "reyhane masumi <r.masumi94@gmail.com>",
   "bundleDependencies": false,
   "dependencies": {
-    "mapbox-gl": "^0.54.0",
+    "mapbox-gl": "^1.6.0",
     "react-mapbox-gl": "^4.6.0",
     "@mapbox/mapbox-gl-draw": "^1.1.2",
     "react-mapbox-gl-draw": "^2.0.3"

@@ -3,20 +3,42 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Marker, Cluster } from "react-mapbox-gl";
 import MapirSource from './components/source.js';
-import { setRTLTextPlugin, GeolocateControl } from "mapbox-gl";
+import { setRTLTextPlugin, GeolocateControl, AttributionControl } from "mapbox-gl";
 import DrawControl from 'react-mapbox-gl-draw';
-
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import './mapir.css';
 
 setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js");
 
+
 class Mapir extends React.Component {
+
 	constructor(props) {
 		super(props);
+		this.setAttribution = this.setAttribution.bind(this);
+
+	}
+	setAttribution(map) {
+
+		if (this.props.userLocation) {
+			map.addControl(new GeolocateControl({
+				positionOptions: {
+					enableHighAccuracy: false,
+					timeout: 5000,
+					maximumAge: 10000
+				},
+				trackUserLocation: true
+			}));
+		};
+		const getElement = document.getElementsByClassName('mapboxgl-ctrl-logo');
+	    getElement[0].href = 'http://map.ir';
+		map.addControl(new AttributionControl(({ compact: true })));
 	}
 
 	render() {
-		const Map = this.props.Map
+		const Map = this.props.Map;
+
 		return React.createElement(Map, _extends({}, this.props, {
 			style: `https://map.ir/vector/styles/main/mapir-xyz-style.json`,
 			minZoom: this.props.minZoom || 12,
@@ -26,18 +48,10 @@ class Mapir extends React.Component {
 				height: "100vh",
 				width: "100vw"
 			},
-			onStyleLoad: this.props.userLocation? map => { map.addControl(new GeolocateControl({
-				positionOptions:{
-					enableHighAccuracy:false,
-					timeout:5000,
-					maximumAge:10000
-				},
-				trackUserLocation: true
-			})); } :''
-			
+
+			onStyleLoad: map => this.setAttribution(map)
 		}));
 	}
-
 }
 
 Mapir.Layer = Layer;
