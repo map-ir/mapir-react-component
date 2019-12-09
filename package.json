@@ -175,7 +175,8 @@
     "react"
   ],
   "files": [
-    "components"
+    "components" ,
+    "assets"
   ],
   "keywords": [
     "mapir",
