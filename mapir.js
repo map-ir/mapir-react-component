@@ -7,7 +7,7 @@ import { setRTLTextPlugin, GeolocateControl, AttributionControl } from "mapbox-g
 import DrawControl from 'react-mapbox-gl-draw';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import './mapir.css';
+import './assets/mapir.css';
 
 setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js");
 
