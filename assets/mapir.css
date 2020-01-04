@@ -24,7 +24,7 @@ a.mapboxgl-ctrl-logo {
     content: '© Map © Openstreetmap';
     cursor: pointer;
     position: absolute;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://w… 2,0a1,1 0 1,0 -2,0 M9,10a1,1 0 1,1 2,0l0,3a1,1 0 1,1 -2,0'/%3E %3C/svg%3E");
+    background-image: url('');
     background-color: #ffffff08;
     width: 35px;
     height: 25px;
