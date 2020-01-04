@@ -1,6 +1,6 @@
 {
   "name": "mapir-react-component",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "main": "mapir.js",
   "_phantomChildren": {
     "@babel/core": "7.2.2",
