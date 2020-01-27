@@ -1,8 +1,9 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import React, { Component } from 'react';
-import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Marker, Cluster } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl,Popup, Cluster } from "react-mapbox-gl";
 import MapirSource from './components/source.js';
+import MarkerComponent from './components/MarkerComponent.js';
 import { setRTLTextPlugin, GeolocateControl, AttributionControl } from "mapbox-gl";
 import DrawControl from 'react-mapbox-gl-draw';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
@@ -63,7 +64,7 @@ Mapir.ZoomControl = ZoomControl;
 Mapir.ScaleControl = ScaleControl;
 Mapir.RotationControl = RotationControl;
 Mapir.Popup = Popup;
-Mapir.Marker = Marker;
+Mapir.Marker = MarkerComponent;
 Mapir.Cluster = Cluster;
 Mapir.setToken = ReactMapboxGl;
 Mapir.DrawControl = DrawControl;
