@@ -35,6 +35,7 @@ class Mapir extends React.Component {
 		const getElement = document.getElementsByClassName('mapboxgl-ctrl-logo');
 	    getElement[0].href = 'http://map.ir';
 		map.addControl(new AttributionControl(({ compact: true })));
+		this.props.onStyleLoad()
 	}
 
 	render() {
