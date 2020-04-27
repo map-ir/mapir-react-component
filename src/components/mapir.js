@@ -1,5 +1,3 @@
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 import React from 'react';
 import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Cluster } from "react-mapbox-gl";
 import MapirSource from './component/source.js';
@@ -38,17 +36,21 @@ class Mapir extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(ReactMapboxGl, _extends({}, this.props, {
-      style: this.props.style || `https://map.ir/vector/styles/main/mapir-xyz-style.json`,
-      minZoom: this.props.minZoom || 12,
-      center: this.props.center || [51.420470, 35.729054],
-      tms: true,
-      containerStyle: this.props.containerStyle || {
-        height: "100vh",
-        width: "100vw"
-      },
-      onStyleLoad: map => this.setAttribution(map)
-    }));
+    return (
+      <ReactMapboxGl
+	  	{...this.props}
+        style={this.props.style ||`https://map.ir/vector/styles/main/mapir-xyz-style.json`}
+        minZoom={this.props.minZoom || 12}
+        center={this.props.center || [51.420470, 35.729054]}
+        tms={true} 
+        containerStyle={this.props.containerStyle || {
+          height: "100vh",
+          width: "100vw"
+        }}
+        onStyleLoad={map => this.setAttribution(map)} 
+      />
+    )
+    
   }
 
 }
