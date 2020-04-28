@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/map-ir/mapir-react-componentstatic/css/main.d1b05096.chunk.css",
+    "main.js": "/map-ir/mapir-react-componentstatic/js/main.659c7573.chunk.js",
+    "main.js.map": "/map-ir/mapir-react-componentstatic/js/main.659c7573.chunk.js.map",
+    "runtime-main.js": "/map-ir/mapir-react-componentstatic/js/runtime-main.91854779.js",
+    "runtime-main.js.map": "/map-ir/mapir-react-componentstatic/js/runtime-main.91854779.js.map",
+    "static/js/2.5b0b329c.chunk.js": "/map-ir/mapir-react-componentstatic/js/2.5b0b329c.chunk.js",
+    "static/js/2.5b0b329c.chunk.js.map": "/map-ir/mapir-react-componentstatic/js/2.5b0b329c.chunk.js.map",
+    "index.html": "/map-ir/mapir-react-componentindex.html",
+    "precache-manifest.f3945240cfc7c6edbc457d502cc79380.js": "/map-ir/mapir-react-componentprecache-manifest.f3945240cfc7c6edbc457d502cc79380.js",
+    "service-worker.js": "/map-ir/mapir-react-componentservice-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/map-ir/mapir-react-componentstatic/css/main.d1b05096.chunk.css.map",
+    "static/js/2.5b0b329c.chunk.js.LICENSE.txt": "/map-ir/mapir-react-componentstatic/js/2.5b0b329c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91854779.js",
+    "static/js/2.5b0b329c.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.659c7573.chunk.js"
+  ]
+}

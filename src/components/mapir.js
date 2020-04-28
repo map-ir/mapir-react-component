@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Cluster } from "react-mapbox-gl";
-import MapirSource from './components/source.js';
-import MapirMarker from './components/marker.js';
+import MapirSource from './source.js';
+import MapirMarker from './marker.js';
 import { setRTLTextPlugin, GeolocateControl, AttributionControl } from "mapbox-gl";
 import DrawControl from 'react-mapbox-gl-draw';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import './assets/mapir.css';
+// import './assets/mapir.css';
 setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js");
 
-class Mapir extends React.Component {
+class Mapir extends Component {
   constructor(props) {
     super(props);
     this.setAttribution = this.setAttribution.bind(this);
@@ -37,18 +37,20 @@ class Mapir extends React.Component {
 
   render() {
     return (
-      <ReactMapboxGl
-	  	{...this.props}
-        style={this.props.style ||`https://map.ir/vector/styles/main/mapir-xyz-style.json`}
-        minZoom={this.props.minZoom || 12}
-        center={this.props.center || [51.420470, 35.729054]}
-        tms={true} 
-        containerStyle={this.props.containerStyle || {
-          height: "100vh",
-          width: "100vw"
-        }}
-        onStyleLoad={map => this.setAttribution(map)} 
-      />
+      <>
+        <ReactMapboxGl
+        {...this.props}
+          style={this.props.style ||`https://map.ir/vector/styles/main/mapir-xyz-style.json`}
+          minZoom={this.props.minZoom || 12}
+          center={this.props.center || [51.420470, 35.729054]}
+          tms={true} 
+          containerStyle={this.props.containerStyle || {
+            height: "100vh",
+            width: "100vw"
+          }}
+          onStyleLoad={map => this.setAttribution(map)} 
+        />
+      </>
     )
     
   }

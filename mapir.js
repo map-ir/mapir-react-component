@@ -1,6 +1,6 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import React from 'react';
+import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature, GeoJSONLayer, Image, ZoomControl, ScaleControl, RotationControl, Popup, Cluster } from "react-mapbox-gl";
 import MapirSource from './components/source.js';
 import MapirMarker from './components/marker.js';
@@ -11,7 +11,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import './assets/mapir.css';
 setRTLTextPlugin("https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js");
 
-class Mapir extends React.Component {
+class Mapir extends Component {
   constructor(props) {
     super(props);
     this.setAttribution = this.setAttribution.bind(this);
@@ -38,7 +38,7 @@ class Mapir extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(ReactMapboxGl, _extends({}, this.props, {
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ReactMapboxGl, _extends({}, this.props, {
       style: this.props.style || `https://map.ir/vector/styles/main/mapir-xyz-style.json`,
       minZoom: this.props.minZoom || 12,
       center: this.props.center || [51.420470, 35.729054],
@@ -48,7 +48,7 @@ class Mapir extends React.Component {
         width: "100vw"
       },
       onStyleLoad: map => this.setAttribution(map)
-    }));
+    })));
   }
 
 }
