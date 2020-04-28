@@ -1,59 +1,60 @@
 {
-  "name": "mapir-react-component",
-  "version": "1.7.3",
-  "private": false,
-  "author": "reyhane masumi <r.masumi94@gmail.com>",
-  "main": "mapir.js",
-  "module": "mapir.js",
-  "babel": {
-    "presets": [
-      "@babel/react"
-    ]
+  "_from": "mapir-react-component@1.6.4",
+  "_id": "mapir-react-component@1.6.4",
+  "_inBundle": false,
+  "_integrity": "sha512-xh1IY2laBWHlbKy08ohmHSGvknSHvLi10wIxVKvUKlSq2TCaqiSXdErGsAFJ3I3YcDMPiwGmA+dhjOOJtMI2sA==",
+  "_location": "/mapir-react-component",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "mapir-react-component@1.6.4",
+    "name": "mapir-react-component",
+    "escapedName": "mapir-react-component",
+    "rawSpec": "1.6.4",
+    "saveSpec": null,
+    "fetchSpec": "1.6.4"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mapir-react-component/-/mapir-react-component-1.6.4.tgz",
+  "_shasum": "a0a8e12de4f4964c025b8ab134a3711c4d33e3e7",
+  "_spec": "mapir-react-component@1.6.4",
+  "_where": "/Users/reyhane/Documents/Shiveh/demo",
+  "author": {
+    "name": "reyhane masumi",
+    "email": "r.masumi94@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/map-ir/mapir-react-component/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
     "@mapbox/mapbox-gl-draw": "^1.1.2",
     "mapbox-gl": "^1.9.1",
-    "react-mapbox-gl": "^4.8.3",
-    "react-mapbox-gl-draw": "^2.0.4"
+    "react-mapbox-gl": "^4.6.0",
+    "react-mapbox-gl-draw": "^2.0.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf components && mkdir components &&  babel src/components -d components --copy-files && mv components/mapir.js  mapir.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "deprecated": false,
+  "description": "<a href=\"https://www.corp.map.ir\">   <img src=\"https://map.ir/css/images/site-logo.svg\" width=\"500\"/> </a>",
+  "devDependencies": {
+    "cross-env": "^5.1.3",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "istanbul": "^1.0.0-alpha"
   },
   "files": [
-    "assets",
-    "components"
+    "components",
+    "assets"
   ],
+  "homepage": "https://github.com/map-ir/mapir-react-component#readme",
   "keywords": [
     "mapir",
-    "map",
-    "نقشه",
-    "مپ",
-    "ری‌اکت",
     "react",
     "npm",
     "module",
@@ -61,17 +62,18 @@
     "javascript"
   ],
   "license": "MIT",
+  "main": "mapir.js",
+  "name": "mapir-react-component",
+  "presets": [
+    "es2015",
+    "react"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/map-ir/mapir-react-component.git"
   },
-  "description": "<a href=\"https://www.corp.map.ir\">   <img src=\"https://map.ir/css/images/site-logo.svg\" width=\"500\"/> </a>",
-  "bugs": {
-    "url": "https://github.com/map-ir/mapir-react-component/issues"
+  "scripts": {
+    "lint": "eslint src test"
   },
-  "homepage": "https://github.com/map-ir/mapir-react-component#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/preset-react": "^7.9.4"
-  }
+  "version": "1.6.4"
 }
