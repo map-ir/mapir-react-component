@@ -6,6 +6,7 @@ import MapirSource from './components/source.js';
 import MarkerComponent from './components/MarkerComponent.js';
 import { setRTLTextPlugin, GeolocateControl, AttributionControl } from "mapbox-gl";
 import DrawControl from 'react-mapbox-gl-draw';
+import axios from 'axios';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './assets/mapir.css';
@@ -20,6 +21,18 @@ class Mapir extends React.Component {
 		this.setAttribution = this.setAttribution.bind(this);
 
 	}
+	
+	componentDidMount() {
+		axios({
+			method: "GET",
+			url: `https://map.ir/vector/load?x-api-key=${this.props.apiKey}`
+		  }).then(function (res) {
+
+		  }).catch(function (err) {
+
+		  })
+	}
+
 	setAttribution(map) {
 
 		if (this.props.userLocation) {

@@ -37,7 +37,10 @@ const Map = Mapir.setToken({
 ```jsx
 render () {
 	return (
-		<Mapir Map={Map}/>
+		<Mapir 
+		Map={Map}
+		apiKey={'Your_API_KEY'}
+		/>
 	)
 }
 ```

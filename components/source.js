@@ -2,10 +2,22 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React, { Component } from 'react';
 import { Source } from "react-mapbox-gl";
+import axios from 'axios';
 
 class MapirSource extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+
+	componentDidMount() {
+		axios({
+			method: "GET",
+			url: `https://map.ir/shiveh/load?x-api-key=${this.props.apiKey}`
+		  }).then(function (res) {
+
+		  }).catch(function (err) {
+
+		  })
 	}
 
 	render() {
@@ -14,7 +26,7 @@ class MapirSource extends React.Component {
 			tileJsonSource: {
 				"type": "raster",
 				"tiles": [
-					`https://map.ir/vector/mobile/1.0.0/Shiveh:Shiveh@EPSG:3857@png/{z}/{x}/{y}.png?x-api-key=${this.props.accessToken}`,
+					`https://map.ir/vector/mobile/1.0.0/Shiveh:Shiveh@EPSG:3857@png/{z}/{x}/{y}.png?x-api-key=${this.props.apiKey}`,
 				],
 				"tileSize": 512
 			}
