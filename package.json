@@ -1,6 +1,6 @@
 {
-  "_from": "mapir-react-component@1.8.0",
-  "_id": "mapir-react-component@1.8.0",
+  "_from": "mapir-react-component@2.0.0",
+  "_id": "mapir-react-component@2.0.0",
   "_inBundle": false,
   "_integrity": "sha512-xh1IY2laBWHlbKy08ohmHSGvknSHvLi10wIxVKvUKlSq2TCaqiSXdErGsAFJ3I3YcDMPiwGmA+dhjOOJtMI2sA==",
   "_location": "/mapir-react-component",
@@ -8,20 +8,20 @@
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "mapir-react-component@1.8.0",
+    "raw": "mapir-react-component@2.0.0",
     "name": "mapir-react-component",
     "escapedName": "mapir-react-component",
-    "rawSpec": "1.8.0",
+    "rawSpec": "2.0.0",
     "saveSpec": null,
-    "fetchSpec": "1.8.0"
+    "fetchSpec": "2.0.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/mapir-react-component/-/mapir-react-component-1.8.0.tgz",
+  "_resolved": "https://registry.npmjs.org/mapir-react-component/-/mapir-react-component-2.0.0.tgz",
   "_shasum": "a0a8e12de4f4964c025b8ab134a3711c4d33e3e7",
-  "_spec": "mapir-react-component@1.8.0",
+  "_spec": "mapir-react-component@2.0.0",
   "_where": "/Users/reyhane/Documents/Shiveh/demo",
   "author": {
     "name": "reyhane masumi",
@@ -32,27 +32,39 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@mapbox/mapbox-gl-draw": "^1.1.2",
-    "mapbox-gl": "^1.9.1",
-    "react-mapbox-gl": "^4.6.0",
-    "react-mapbox-gl-draw": "^2.0.3",
-    "axios": "^0.19.2"
+    "@mapbox/mapbox-gl-draw": "^1.3.0",
+    "mapbox-gl": "^1.13.1",
+    "react-mapbox-gl": "^5.1.1",
+    "react-mapbox-gl-draw": "^2.0.4"
   },
   "deprecated": false,
   "description": "<a href=\"https://www.corp.map.ir\">   <img src=\"https://map.ir/css/images/site-logo.svg\" width=\"500\"/> </a>",
   "devDependencies": {
-    "cross-env": "^5.1.3",
-    "eslint": "^4.16.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
-    "istanbul": "^1.0.0-alpha"
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "autoprefixer": "^10.3.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.0",
+    "istanbul": "^0.4.5",
+    "rollup": "^2.56.3",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.1",
+    "postcss": "^8.3.6"
   },
-  "files": [
-    "components",
-    "assets"
-  ],
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "homepage": "https://github.com/map-ir/mapir-react-component#readme",
   "keywords": [
     "mapir",
@@ -63,7 +75,13 @@
     "javascript"
   ],
   "license": "MIT",
-  "main": "mapir.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.js",
+  "style": "dist/index.css",
+  "files": [
+    "dist"
+  ],
   "name": "mapir-react-component",
   "presets": [
     "es2015",
@@ -74,7 +92,8 @@
     "url": "git+https://github.com/map-ir/mapir-react-component.git"
   },
   "scripts": {
+    "build": "rollup -c",
     "lint": "eslint src test"
   },
-  "version": "1.8.1"
+  "version": "2.0.0"
 }
