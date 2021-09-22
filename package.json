@@ -1,6 +1,6 @@
 {
-  "_from": "mapir-react-component@2.0.0",
-  "_id": "mapir-react-component@2.0.0",
+  "_from": "mapir-react-component@2.0.1",
+  "_id": "mapir-react-component@2.0.1",
   "_inBundle": false,
   "_integrity": "sha512-xh1IY2laBWHlbKy08ohmHSGvknSHvLi10wIxVKvUKlSq2TCaqiSXdErGsAFJ3I3YcDMPiwGmA+dhjOOJtMI2sA==",
   "_location": "/mapir-react-component",
@@ -8,20 +8,20 @@
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "mapir-react-component@2.0.0",
+    "raw": "mapir-react-component@2.0.1",
     "name": "mapir-react-component",
     "escapedName": "mapir-react-component",
-    "rawSpec": "2.0.0",
+    "rawSpec": "2.0.1",
     "saveSpec": null,
-    "fetchSpec": "2.0.0"
+    "fetchSpec": "2.0.1"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/mapir-react-component/-/mapir-react-component-2.0.0.tgz",
+  "_resolved": "https://registry.npmjs.org/mapir-react-component/-/mapir-react-component-2.0.1.tgz",
   "_shasum": "a0a8e12de4f4964c025b8ab134a3711c4d33e3e7",
-  "_spec": "mapir-react-component@2.0.0",
+  "_spec": "mapir-react-component@2.0.1",
   "_where": "/Users/reyhane/Documents/Shiveh/demo",
   "author": {
     "name": "reyhane masumi",
@@ -95,5 +95,5 @@
     "build": "rollup -c",
     "lint": "eslint src test"
   },
-  "version": "2.0.0"
+  "version": "2.0.1"
 }

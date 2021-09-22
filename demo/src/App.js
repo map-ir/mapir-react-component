@@ -19,7 +19,10 @@ const Map = Mapir.setToken({
 function App() {
   return (
     <div>
-      <Mapir Map={Map} apiKey={apiKey} />
+      <Mapir Map={Map} apiKey={apiKey}>
+        <Mapir.Raster id="source_id" apiKey={apiKey} />
+        <Mapir.Layer type="raster" id="layer_id" sourceId="source_id" />
+      </Mapir>
     </div>
   );
 }

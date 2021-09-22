@@ -9,7 +9,7 @@ class MapirRaster extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`https://map.ir/shiveh/load?x-api-key=${this.props.apiKey}`, {
+    fetch(`https://map.ir/vector/load?x-api-key=${this.props.apiKey}`, {
       method: 'POST',
     })
       .then(function (res) {})
@@ -24,7 +24,7 @@ class MapirRaster extends React.Component {
         tileJsonSource={{
           type: 'raster',
           tiles: [
-            `https://map.ir/vector/mobile/1.0.0/Shiveh:Shiveh@EPSG:3857@png/{z}/{x}/{y}.png?x-api-key=${this.props.apiKey}`,
+            `https://map.ir/shiveh/xyz/1.0.0/Shiveh:Shiveh@EPSG:3857@png/{z}/{x}/{y}.png?x-api-key=${this.props.apiKey}`,
           ],
           tileSize: 512,
         }}
