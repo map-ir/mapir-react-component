@@ -26,7 +26,7 @@ class MapirRaster extends React.Component {
           tiles: [
             `https://map.ir/shiveh/xyz/1.0.0/Shiveh:Shiveh@EPSG:3857@png/{z}/{x}/{y}.png?x-api-key=${this.props.apiKey}`,
           ],
-          tileSize: 512,
+          tileSize: 256,
         }}
       />
     );
