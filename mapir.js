@@ -79,6 +79,7 @@ class Mapir extends React.Component {
 
   render() {
     const Map = this.props.Map;
+    const onStyleLoadProp = this.props.onStyleLoad
 
     return (
       <Map
@@ -98,7 +99,7 @@ class Mapir extends React.Component {
         }
         onStyleLoad={(map) => {
           this.setAttribution(map);
-          this.props.onStyleLoad(map);
+          onStyleLoadProp(map);
         }}
       />
     );
