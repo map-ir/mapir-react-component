@@ -72,7 +72,7 @@ class Mapir extends React.Component {
         })
       );
     }
-    const getElement = document.getElementsByClassName('mapboxgl-ctrl-logo');
+    const getElement = docuonStyleLoadment.getElementsByClassName('mapboxgl-ctrl-logo');
     getElement[0].href = 'http://map.ir';
     map.addControl(new AttributionControl({ compact: true }));
   }
@@ -98,6 +98,7 @@ class Mapir extends React.Component {
         }
         onStyleLoad={(map) => {
           this.setAttribution(map);
+          this.props.onStyleLoad(map);
         }}
       />
     );
