@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mapir-react-component-demo/static/css/main.61de8df0.chunk.css",
-    "main.js": "/mapir-react-component-demo/static/js/main.eaa99b90.chunk.js",
-    "main.js.map": "/mapir-react-component-demo/static/js/main.eaa99b90.chunk.js.map",
+    "main.js": "/mapir-react-component-demo/static/js/main.811d0c8a.chunk.js",
+    "main.js.map": "/mapir-react-component-demo/static/js/main.811d0c8a.chunk.js.map",
     "runtime-main.js": "/mapir-react-component-demo/static/js/runtime-main.22f10aa5.js",
     "runtime-main.js.map": "/mapir-react-component-demo/static/js/runtime-main.22f10aa5.js.map",
     "static/js/2.0c34be2e.chunk.js": "/mapir-react-component-demo/static/js/2.0c34be2e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.22f10aa5.js",
     "static/js/2.0c34be2e.chunk.js",
     "static/css/main.61de8df0.chunk.css",
-    "static/js/main.eaa99b90.chunk.js"
+    "static/js/main.811d0c8a.chunk.js"
   ]
 }
