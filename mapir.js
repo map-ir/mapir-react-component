@@ -99,7 +99,7 @@ class Mapir extends React.Component {
         }
         onStyleLoad={(map) => {
           this.setAttribution(map);
-          onStyleLoadProp(map);
+          if(onStyleLoadProp) onStyleLoadProp(map);
         }}
       />
     );
