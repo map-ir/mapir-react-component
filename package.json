@@ -55,11 +55,13 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.0",
     "istanbul": "^0.4.5",
+    "postcss": "^8.3.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.1",
-    "postcss": "^8.3.6"
+    "rollup-plugin-postcss": "^4.0.1"
   },
   "peerDependencies": {
     "react": "^17.0.2",

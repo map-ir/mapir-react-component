@@ -1,16 +1,19 @@
-import Mapir from 'mapir-react-component';
-import 'mapir-react-component/dist/index.css';
-import './App.css';
+import Mapir from "mapir-react-component";
+import "mapir-react-component/dist/index.css";
+import "./App.css";
 
-const apiKey =
-  'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjVkMjhhOGY5YzRlMzBlZmM3NTFhYjRkYWQ1Y2QyMDczNzllMTViM2ZjOTg3MzljYzIxNTYyYjYwNWRkMzc2YmFlZmIxNWZhY2ZlYjUyNmYwIn0.eyJhdWQiOiI2OTgwIiwianRpIjoiNWQyOGE4ZjljNGUzMGVmYzc1MWFiNGRhZDVjZDIwNzM3OWUxNWIzZmM5ODczOWNjMjE1NjJiNjA1ZGQzNzZiYWVmYjE1ZmFjZmViNTI2ZjAiLCJpYXQiOjE1NzU5NTYyNzUsIm5iZiI6MTU3NTk1NjI3NSwiZXhwIjoxNTc4NDYxODc1LCJzdWIiOiIiLCJzY29wZXMiOlsiYmFzaWMiXX0.Fx_r1Rguxm3Gtp_RDGxSbjhm67w-f_tldO0AHAyr1-L9JkGKgnaVBNWv4_x1qdjk6I6biCXAKpB5jafrUsp8bRS11pz2Tg0G80vaGb891_XF97pT-WGVV3J_H447tiC5JHj7ZSRodOsiVc8EblsX2BmxgewKyHYqs-6YGHYrVro_-xzNRl8EoXzDZtV34HqUWA0IQ5nqhVW39eIWzu6dmySKfSFoLRcOL9-8qC8p2jk9_siki9k3RBt5NVJyl8rOPHASy6yuqABWyeZZV5N8qELqiipP-Ka_zjc0DgrxwSE1AdvxdNDhZO7x7v72X0eM3oWvFMpwGqI5pRzIOpASiw';
+const API_KEY =
+  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImM2ZjVkYzFjNGQ3ZjMxNmFkZDE5Njc3MTliMjNhZDFiOTQ1Nzg2ZmJhOWVkNzBhZDdmNTMwNmFjOWY3OTNjNzI4NjM0YTlmMGQ2N2IwNmY3In0.eyJhdWQiOiIyMDA4NyIsImp0aSI6ImM2ZjVkYzFjNGQ3ZjMxNmFkZDE5Njc3MTliMjNhZDFiOTQ1Nzg2ZmJhOWVkNzBhZDdmNTMwNmFjOWY3OTNjNzI4NjM0YTlmMGQ2N2IwNmY3IiwiaWF0IjoxNjY5MDk2ODczLCJuYmYiOjE2NjkwOTY4NzMsImV4cCI6MTY3MTYwMjQ3Mywic3ViIjoiIiwic2NvcGVzIjpbImJhc2ljIl19.r5EUqb9v6QDkS44OUQ8jxe19E3sdhZWFyGAPfrLvJ8TKMtxkKVipSdNUqmSTewng6595y3J7nWfCAYInAE4nSYm0oOxjIBu9Cs2vPhrpl3rrALbrVWi5MfmO1u6C176qy5oLM7Y6JY2bBVDJkpfZct_jKpo75C8BzB8jMwp1KAb0rO3evboszfNnoQ5H_VaZFrKIoXCea0YfcCRKtsrTtpGEWGPolk-_ITLNbtgHz8ust-TjeYKDHsS4OypptcJNkm83K5I74OjSMNblpza44ZxW8bSTZviQu7FTSuI2tfz27MQ7ijpLZHio23ps_yepvL_ejvhEEVdzkU4vIU5i2A";
+  
+const CENTER_COORDS = [51.42047, 35.729054];
+
 const Map = Mapir.setToken({
   transformRequest: (url) => {
     return {
       url: url,
       headers: {
-        'x-api-key': apiKey, //Mapir api key
-        'Mapir-SDK': 'reactjs',
+        "x-api-key": API_KEY, //Mapir api key
+        "Mapir-SDK": "reactjs",
       },
     };
   },
@@ -19,9 +22,8 @@ const Map = Mapir.setToken({
 function App() {
   return (
     <div>
-      <Mapir Map={Map} apiKey={apiKey}>
-        <Mapir.Raster id="source_id" apiKey={apiKey} />
-        <Mapir.Layer type="raster" id="layer_id" sourceId="source_id" />
+      <Mapir Map={Map} apiKey={API_KEY} center={CENTER_COORDS}>
+        <Mapir.Marker coordinates={CENTER_COORDS} />
       </Mapir>
     </div>
   );
